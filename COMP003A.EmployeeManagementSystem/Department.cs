@@ -5,7 +5,9 @@ namespace COMP003A.EmployeeManagementSystem;
 /// </summary>
     public abstract class Department
     {
-    
+    /// <summary>
+    /// department name
+    /// </summary>
         public string DepartmentName { get; set; }
 
         public Department(string name)
