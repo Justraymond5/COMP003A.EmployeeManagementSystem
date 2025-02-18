@@ -5,17 +5,14 @@
 // Purpose: Employee management system demonstrating OOP principles in C#
 class Program
 {
-    
-   /// <summary>
-   /// The main that displays and collects everything
-   /// </summary>
 
     static void Main(string[] args)
     {
         //User adding names
         Console.WriteLine("Let's create an employee account ");
-        Console.Write("Enter Employee ID: ");
+        Console.Write("PLEASE enter the employee's ID: ");
         string employeeId = Console.ReadLine();
+        //Console.Write("Enter First Name: ");
         // An if statement to not allow blank in first name
         string firstName;
         while (true)
@@ -26,11 +23,13 @@ class Program
             {
                 break;
             }
-            Console.WriteLine("You need a first name.");
+            Console.WriteLine("You need a first name ");
+            
         }
         Console.Write("Enter Middle Name (Press Enter to skip): ");
         string middleName = Console.ReadLine();
         // An if statement to not allow blank in last name
+        
         string lastName;
         while (true)
         {
@@ -49,8 +48,10 @@ class Program
         {
             Console.WriteLine("Note: Please enter a valid number, salary must be a positive number.");
             Console.Write("Enter Salary: ");
+            
             if (double.TryParse(Console.ReadLine(), out salary) && salary >= 0)
             {
+                
                 break;
             }
             Console.WriteLine("Negative number not acceptable.");
@@ -58,9 +59,9 @@ class Program
         /// <summery
         /// This will print out all the saved data from the classes
         /// </summery
-        try
-        {
+       
             Employee employee = new Employee(employeeId, firstName, middleName, lastName, salary);
+        
             Console.WriteLine("\nYou've created an employee");
             
             employee.DisplayEmployeeInfo();
@@ -74,11 +75,7 @@ class Program
 
             itDepartment.DisplayDepartmentInfo();
             itDepartment.Operate();
-        }
-        catch (ArgumentException ex)
-        {
-            Console.WriteLine($"Error creating employee");
-        }
+        
         
     }
 

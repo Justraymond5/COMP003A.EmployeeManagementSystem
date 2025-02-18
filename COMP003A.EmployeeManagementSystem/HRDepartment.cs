@@ -6,7 +6,7 @@ public class HRDepartment : Department, IDepartmentOperations
      /// <summary>
      /// Just displying info
      /// </summary>
-     /// <returns></returns>
+     /// <returns> a displaying message </returns>
      /// Overrise is replacing
     public override string GetDepartmentDetails() 
     { return "Handles employee relations and recruitment."; } 

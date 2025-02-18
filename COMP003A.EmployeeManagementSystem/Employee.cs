@@ -19,12 +19,14 @@ namespace COMP003A.EmployeeManagementSystem
         public string EmployeeId
         {
             get { return _employeeId; }
+            
         }
         /// <summary>
-        /// Gets the first name ensuring that its not blank
+        /// Makes sure first name is nto empty
         /// </summary>
         public string FirstName
         {
+            
             get { return _firstName; }
             set
             {
@@ -51,7 +53,9 @@ namespace COMP003A.EmployeeManagementSystem
         /// </summary>
         public string LastName
         {
+            
             get { return _lastName; }
+            
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
@@ -68,18 +72,20 @@ namespace COMP003A.EmployeeManagementSystem
         {
             get { return _salary; }
             set
+            
             {
                 if (value < 0)
                 {
                     throw new ArgumentException("Salary cannot be less than 0.");
                 }
                 _salary = value;
+                
             }
         }
 
         // Constructor
         /// <summary>
-        /// Setting some variables
+        /// INitialize employee details with provides values
         /// </summary>
         /// <param name="employeeId">ID</param>
         /// <param name="firstName">firstname</param>
@@ -103,11 +109,13 @@ namespace COMP003A.EmployeeManagementSystem
         {
             if (string.IsNullOrEmpty(MiddleName))
             {
+                
                 Console.WriteLine($"{FirstName} {LastName}");
             }
             else
             {
                 Console.WriteLine($"{FirstName} {MiddleName} {LastName}");
+                
             }
         }
 
@@ -116,6 +124,7 @@ namespace COMP003A.EmployeeManagementSystem
         /// </summary>
         public void DisplayEmployeeInfo()
         {
+            
             Console.WriteLine($"Employee ID: {EmployeeId}");
             PrintFullName();
             Console.WriteLine($"Salary: ${Salary}");

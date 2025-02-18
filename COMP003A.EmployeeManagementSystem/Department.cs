@@ -6,7 +6,7 @@ namespace COMP003A.EmployeeManagementSystem;
     public abstract class Department
     {
     /// <summary>
-    /// department name
+    /// Department name is got
     /// </summary>
         public string DepartmentName { get; set; }
 
@@ -14,11 +14,16 @@ namespace COMP003A.EmployeeManagementSystem;
         {
             DepartmentName = name;
         }
+        //Just displays data, both of them below
         /// <summary>
-        /// Just displays data, both of them below
+        /// Uses data saved in HRDepartmnet to then print out
         /// </summary>
         
         public abstract string GetDepartmentDetails();
+        
+        /// <summary>
+        /// Uses details saved in the departmen
+        /// </summary>
         public void DisplayDepartmentInfo()
         {
             Console.WriteLine($"Department Name: {DepartmentName}");
